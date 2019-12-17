@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+
+    <div>
+
+        <table class="table table-dark">
+  <thead>
+    <tr>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Level of education</th>
+        <th scope="col">Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for elements in data %}
+
+        <tr>
+        {% for element in elements %}
+            <td>{{ element }}</td>
+        {% endfor %}
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+    </div>
+
+{% endblock %}
